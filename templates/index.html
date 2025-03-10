@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask avec Jinja2</title>
+</head>
+<body>
+    <h1>Bienvenue, {{ data.name }} !</h1>
+    <p>Âge: {{ data.age }}</p>
+    <p>Ville: {{ data.city }}</p>
+
+    <h2>Compétences :</h2>
+    <ul>
+        {% for skill in data.skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
