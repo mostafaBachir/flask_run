@@ -1,0 +1,45 @@
+# 🐍 Ignorer les fichiers Python compilés
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# 📦 Ignorer l'environnement virtuel (venv)
+venv/
+.env
+.envrc
+*.env
+
+# 🐳 Ignorer les fichiers Docker temporaires
+docker-compose.override.yml
+.dockerignore
+
+# ☁ Ignorer les fichiers Terraform (états, logs, etc.)
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+crash.log
+
+# 🔥 Ignorer les logs & fichiers temporaires
+logs/
+*.log
+debug.log
+*.out
+
+# 🏗 Ignorer Cloud Build et Artifact Registry
+cloudbuild.yaml
+gcr.io/
+*.tar
+*.gz
+
+# 🔍 Ignorer les fichiers secrets ou credentials GCP
+credentials.json
+gcloud_key.json
+
+# ⚙ Ignorer les fichiers de configuration système
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
