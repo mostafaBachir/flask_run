@@ -10,6 +10,7 @@ data = {
     "skills": ["Python", "Golang", "AWS", "DevOps"],
     "factorial": None,
     "even": None,
+    "numbero":0
 }
 
 def factorial(n):
@@ -21,10 +22,16 @@ def factorial(n):
 @app.route('/')
 def index():
     # Récupérer le nombre de la requête (GET)
-    number = request.args.get('number', default=None, type=int)
-
+    number = request.args.get('numbero', default=0, type=int)
+    numbero = request.args
+    print(numbero)
+    
+    
+    number = number + 1
+    
     if number is not None:
         data["factorial"] = factorial(number)
+        data["numbero"] = number
         data["even"] = "Oui, le nombre est pair" if number % 2 == 0 else "Non, le nombre est impair"
     else:
         data["factorial"] = "Aucun nombre fourni"

@@ -6,8 +6,14 @@
     <title>Flask avec Jinja2</title>
 </head>
 <body>
-    <h1>Bienvenue, {{ data.name }} !</h1>
-    <p>Âge: {{ data.age }}</p>
+    <form action="/" method="GET">
+
+        <input type="number" value={{numbero}} id="numbero" required>
+        <br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>  <h1>Bienvenue, {{ data.name }} !</h1>
+    <p>Âge: {{ data.number }}</p>
     <p>Ville: {{ data }}</p>
 
     <h2>Compétences :</h2>
